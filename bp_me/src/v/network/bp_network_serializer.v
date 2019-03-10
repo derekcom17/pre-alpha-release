@@ -1,11 +1,12 @@
 module bp_network_serializer 
   //import bp_common_pkg::*;
   #(  parameter   dest_id_width_p       = "inv"
+    , parameter   src_id_width_p        = "inv"
     , parameter   source_data_width_p   = "inv"
     , parameter   packet_data_width_p   = "inv"
     , localparam  num_packets_p         = (source_data_width_p / packet_data_width_p) + 1
     , localparam  total_data_width      = packet_data_width_p*num_packets_p
-    , localparam  total_o_data_width    = packet_data_width_p + dest_id_width_p
+    , localparam  total_o_data_width    = packet_data_width_p + dest_id_width_p + src_id_width_p
   )
   (   input                           clk_i
     , input                           reset_i
@@ -24,16 +25,26 @@ module bp_network_serializer
   wire corrected_data_in = total_data_width'b{{total_data_width-source_data_width_p{0}},data_i};
 
   reg [dest_id_width_p-1:0] dest_id_r;
+  reg [src_id_width_p-1:0] src_id_r;
 
   always @(posedge clk_i) begin 
-    if(reset_i) dest_id <= '0;
+    if(reset_i) begin
+      dest_id_r <= '0;
+      src_id_r  <+ '0;
+    end // if(reset_i)
     else begin 
-      if(valid_i & ready_o) dest_id_r <= data_i[(source_data_width_p-1)-:dest_id_width_p];
-      else dest_id_r <= dest_id_r;
-    end
-  end
+      if(valid_i & ready_o) begin
+        dest_id_r <= data_i[(source_data_width_p-1)-:dest_id_width_p];
+        src_id_r  <= data_i[(source_data_width_p-dest_id_width_p-1)-:src_id_width_p];
+      end // if(valid_i & ready_o)
+      else begin
+        dest_id_r <= dest_id_r;
+        src_id_r <= src_id_r;
+      end // else
+    end // else
+  end // always @(posedge clk_i)
 
-  assign data_o[(total_o_data_width-1)-:dest_id_width_p] = dest_id_r;
+  assign data_o[(total_o_data_width-1)-:(dest_id_width_p+src_id_width_p)] = {dest_id_r, src_id_r};
 
   bsg_parallel_in_serial_out serial_me
     #(  .width_p(packet_data_width_p)

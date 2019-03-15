@@ -5,6 +5,8 @@ module bp_coherence_network_channel_serialize
   , parameter chunk_size_p        = "inv"
   , parameter debug_p             = "inv"
   , parameter repeater_output_p   = "inv"
+  , parameter enable_clock_gating_p = 1'b0 // Default to clock gating off
+
   , localparam  dest_id_width_p       = `BSG_SAFE_CLOG2(num_dst_p)
   , localparam  src_id_width_p        = `BSG_SAFE_CLOG2(num_src_p)
   , localparam  num_packets_p         = (packet_width_p + chunk_size_p - 1) / packet_width_p
@@ -57,6 +59,7 @@ module bp_coherence_network_channel_serialize
                                , .num_dst_p(num_dst_p)
                                , .debug_p(debug_p)//
                                , .repeater_output_p(repeater_output_p)//
+                               , .enable_clock_gating_p(enable_clock_gating_p)
                                )
     network_channel
     ( .clk_i(clk_i)
@@ -78,6 +81,7 @@ module bp_coherence_network_channel_serialize
                             , .num_src(num_src_p)
                             , .source_data_width_p(packet_width_p) 
                             , .packet_data_width_p(chunk_size_p) 
+                            , .enable_clock_gating_p(enable_clock_gating_p)
                             )
     to_parallel
     ( .clk_i(clk_i)

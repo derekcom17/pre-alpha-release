@@ -4,6 +4,8 @@ module bp_network_deserializer
   , parameter   num_src               = "inv"
   , parameter   source_data_width_p   = "inv"
   , parameter   packet_data_width_p   = "inv"
+  , parameter enable_clock_gating_p = 1'b0 // Default to clock gating off
+  
   , localparam  dest_id_width_p       = `BSG_SAFE_CLOG2(num_dest)
   , localparam  src_id_width_p        = `BSG_SAFE_CLOG2(num_src)
   , localparam  num_packets_p         = (source_data_width_p + packet_data_width_p - 1) / packet_data_width_p
@@ -60,6 +62,7 @@ module bp_network_deserializer
   bsg_fifo_1r1w_small #(.width_p(src_id_width_p)
                       , .els_p(num_src)
                       , .ready_THEN_valid_p(0)
+                      , .enable_clock_gating_p(enable_clock_gating_p)
                       )
     queue
     ( .clk_i(clk_i)
@@ -80,6 +83,7 @@ module bp_network_deserializer
                                    , .mask_width_p(packet_data_width_p)
                                    , .els_p(2**`BSG_SAFE_CLOG2(num_src))
                                    , .harden_p(1'b0)
+                                   , .enable_clock_gating_p(enable_clock_gating_p)
                                    )
     scratch_pad
     ( .clk_i(clk_i)

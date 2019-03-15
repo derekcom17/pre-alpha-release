@@ -138,10 +138,14 @@ module bp_cce_top
   logic                                          mem_data_cmd_v_from_cce;
   logic                                          mem_data_cmd_ready_to_cce;
 
+  localparam data_fifo_depth_lp = 1; // These fifos are very wide
+  localparam  cmd_fifo_depth_lp = 1; // These fifos are less wide
+
   // Inbound LCE to CCE
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_lce_cce_req_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(cmd_fifo_depth_lp) // can be as low as 1
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     lce_cce_req_fifo
@@ -155,9 +159,10 @@ module bp_cce_top
       ,.yumi_i(lce_req_yumi_from_cce)
       );
 
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_lce_cce_resp_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(`BSG_MAX(cmd_fifo_depth_lp, 2))
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     lce_cce_resp_fifo
@@ -171,9 +176,10 @@ module bp_cce_top
       ,.yumi_i(lce_resp_yumi_from_cce)
       );
 
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_lce_cce_data_resp_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(data_fifo_depth_lp) // can be as low as 1
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     lce_cce_data_resp_fifo
@@ -188,9 +194,10 @@ module bp_cce_top
       );
 
   // Inbound Mem to CCE
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_mem_cce_resp_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(cmd_fifo_depth_lp) // can be as low as 1
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     mem_cce_resp_fifo
@@ -204,9 +211,10 @@ module bp_cce_top
       ,.yumi_i(mem_resp_yumi_from_cce)
       );
 
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_mem_cce_data_resp_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(data_fifo_depth_lp) // can be as low as 1
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     mem_cce_data_resp_fifo
@@ -222,9 +230,10 @@ module bp_cce_top
 
 
   // Outbound CCE to Mem
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_cce_mem_cmd_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(cmd_fifo_depth_lp) // can be as low as 1
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     cce_mem_cmd_fifo
@@ -238,9 +247,10 @@ module bp_cce_top
       ,.yumi_i(mem_cmd_yumi_i)
       );
 
-  bsg_two_fifo
+  bsg_fifo_1r1w_small
     #(.width_p(bp_cce_mem_data_cmd_width_lp)
       ,.ready_THEN_valid_p(1) // ready-then-valid
+      ,.els_p(data_fifo_depth_lp) // can be as low as 1
       ,.enable_clock_gating_p(1'b1) // Gating enabled! 
       )
     cce_mem_data_cmd_fifo

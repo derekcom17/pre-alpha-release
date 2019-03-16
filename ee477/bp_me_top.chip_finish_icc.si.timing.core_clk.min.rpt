@@ -1,0 +1,1529 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type min
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group core_clk
+	-transition_time
+	-sort_by slack
+Design : bp_me_top
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 15 16:13:02 2019
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group core_clk
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_462_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_462_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_462_/Q (DFFX1)                0.033      0.182 &    0.594 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[462] (saed90_512x512_1P)    0.024     -0.001 &    0.593 r
+  data arrival time                                                                    0.593
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.593
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.061
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_460_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_460_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_460_/Q (DFFX1)                0.033      0.181 &    0.594 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[460] (saed90_512x512_1P)    0.023     -0.000 &    0.594 r
+  data arrival time                                                                    0.594
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.594
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_459_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_459_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_459_/Q (DFFX1)                0.033      0.182 &    0.595 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[459] (saed90_512x512_1P)    0.024      0.000 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_322_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_322_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_322_/Q (DFFX1)                0.033      0.182 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[322] (saed90_512x512_1P)    0.024     -0.001 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_469_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_469_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_469_/Q (DFFX1)                0.034      0.183 &    0.595 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[469] (saed90_512x512_1P)    0.025     -0.001 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_326_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_326_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_326_/Q (DFFX1)                0.032      0.181 &    0.595 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[326] (saed90_512x512_1P)    0.023     -0.000 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_448_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_448_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_448_/Q (DFFX1)                0.033      0.182 &    0.595 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[448] (saed90_512x512_1P)    0.024     -0.000 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_343_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_343_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_343_/Q (DFFX1)                0.032      0.181 &    0.595 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[343] (saed90_512x512_1P)    0.023     -0.000 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.062
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_332_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_332_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_332_/Q (DFFX1)                0.033      0.182 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[332] (saed90_512x512_1P)    0.024     -0.000 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_330_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_330_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_330_/Q (DFFX1)                0.034      0.183 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[330] (saed90_512x512_1P)    0.025     -0.001 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_473_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_473_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_473_/Q (DFFX1)                0.034      0.182 &    0.595 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[473] (saed90_512x512_1P)    0.025      0.000 &    0.595 r
+  data arrival time                                                                    0.595
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.595
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_338_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_338_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_338_/Q (DFFX1)                0.033      0.182 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[338] (saed90_512x512_1P)    0.024     -0.000 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_456_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_456_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_456_/Q (DFFX1)                0.034      0.183 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[456] (saed90_512x512_1P)    0.025      0.000 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_318_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_318_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_318_/Q (DFFX1)                0.034      0.183 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[318] (saed90_512x512_1P)    0.025     -0.001 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_316_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_316_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_316_/Q (DFFX1)                0.033      0.182 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[316] (saed90_512x512_1P)    0.024      0.000 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_334_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_334_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_334_/Q (DFFX1)                0.033      0.182 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[334] (saed90_512x512_1P)    0.024      0.000 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.063
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_340_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_340_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_340_/Q (DFFX1)                0.035      0.183 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[340] (saed90_512x512_1P)    0.025     -0.001 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_446_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_446_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_446_/Q (DFFX1)                0.035      0.183 &    0.596 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[446] (saed90_512x512_1P)    0.025     -0.000 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_453_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_453_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_453_/Q (DFFX1)                0.037      0.185 &    0.598 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[453] (saed90_512x512_1P)    0.027     -0.001 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_325_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_325_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_325_/Q (DFFX1)                0.035      0.183 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[325] (saed90_512x512_1P)    0.025     -0.000 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_471_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_471_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_471_/Q (DFFX1)                0.036      0.184 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[471] (saed90_512x512_1P)    0.026     -0.001 &    0.596 r
+  data arrival time                                                                    0.596
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.596
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_319_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_319_/CLK (DFFX1)              0.145      0.006 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_319_/Q (DFFX1)                0.037      0.184 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[319] (saed90_512x512_1P)    0.026     -0.001 &    0.597 r
+  data arrival time                                                                    0.597
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.597
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_341_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_341_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_341_/Q (DFFX1)                0.035      0.183 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[341] (saed90_512x512_1P)    0.025      0.000 &    0.597 r
+  data arrival time                                                                    0.597
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.597
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_457_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_457_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_457_/Q (DFFX1)                0.036      0.184 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[457] (saed90_512x512_1P)    0.026      0.000 &    0.597 r
+  data arrival time                                                                    0.597
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.597
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_305_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_305_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_305_/Q (DFFX1)                0.036      0.184 &    0.598 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[305] (saed90_512x512_1P)    0.026     -0.001 &    0.597 r
+  data arrival time                                                                    0.597
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.597
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.064
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_329_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_329_/CLK (DFFX1)              0.145      0.007 &    0.414 r
+  genblk1_0__bp_mem/mem_data_i_reg_329_/Q (DFFX1)                0.036      0.184 &    0.597 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[329] (saed90_512x512_1P)    0.026      0.000 &    0.597 r
+  data arrival time                                                                    0.597
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.597
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.065
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_487_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_487_/CLK (DFFX1)              0.145      0.006 &    0.417 r
+  genblk1_0__bp_mem/mem_data_i_reg_487_/Q (DFFX1)                0.032      0.181 &    0.598 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[487] (saed90_512x512_1P)    0.023     -0.001 &    0.598 r
+  data arrival time                                                                    0.598
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.598
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.065
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_303_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_303_/CLK (DFFX1)              0.145      0.010 &    0.417 r
+  genblk1_0__bp_mem/mem_data_i_reg_303_/Q (DFFX1)                0.032      0.181 &    0.598 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[303] (saed90_512x512_1P)    0.023     -0.001 &    0.598 r
+  data arrival time                                                                    0.598
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.598
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.065
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_458_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  genblk1_0__bp_mem/CTSINVX16_G1B1I43/ZN (INVX8)                 0.144      0.088 &    0.411 r
+  genblk1_0__bp_mem/mem_data_i_reg_458_/CLK (DFFX1)              0.144      0.002 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_458_/Q (DFFX1)                0.038      0.185 &    0.598 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[458] (saed90_512x512_1P)    0.027     -0.000 &    0.598 r
+  data arrival time                                                                    0.598
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.598
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.065
+
+
+  Startpoint: genblk1_0__bp_mem/mem_data_i_reg_317_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: genblk1_0__bp_mem/mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B6I3/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                          Trans       Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.026      0.021 &    0.021 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.054      0.021 &    0.042 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.042      0.042 &    0.085 f
+  CTSINVX4_G1B5I2/ZN (INVX2)                                     0.121      0.063 &    0.148 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                     0.094      0.069 &    0.217 f
+  CTSINVX8_G1B3I5/ZN (INVX16)                                    0.083      0.038 &    0.255 r
+  CTSINVX16_G1B2I11/ZN (INVX8)                                   0.091      0.068 &    0.323 f
+  CTSINVX16_G1B1I58/ZN (INVX8)                                   0.145      0.084 &    0.407 r
+  genblk1_0__bp_mem/mem_data_i_reg_317_/CLK (DFFX1)              0.145      0.006 &    0.413 r
+  genblk1_0__bp_mem/mem_data_i_reg_317_/Q (DFFX1)                0.038      0.185 &    0.598 r
+  genblk1_0__bp_mem/mem/macro_mem/I1[317] (saed90_512x512_1P)    0.027      0.000 &    0.598 r
+  data arrival time                                                                    0.598
+
+  clock core_clk (rise edge)                                     0.000      0.000      0.000
+  clock source latency                                                      0.000      0.000
+  clk_i (in)                                                     0.000      0.000 &    0.000 r
+  CTSINVX8_G1B8I1/ZN (INVX32)                                    0.030      0.025 &    0.025 f
+  CTSINVX4_G1B7I3/ZN (INVX16)                                    0.061      0.024 &    0.049 r
+  CTSINVX8_G1B6I3/ZN (INVX16)                                    0.053      0.052 &    0.102 f
+  CTSINVX8_G1B5I1/ZN (INVX4)                                     0.106      0.060 &    0.162 r
+  genblk1_0__bp_mem/mem/icg/cg/GCLK (CGLPPSX2)                   0.255      0.263 &    0.425 r
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I11/ZN (INVX32)            0.057      0.040 &    0.465 f
+  genblk1_0__bp_mem/mem/CTSINVX32_G2B1I1/ZN (INVX1)              0.055      0.035 &    0.499 r
+  genblk1_0__bp_mem/mem/macro_mem/CE1 (saed90_512x512_1P)        0.040      0.000 &    0.499 r
+  clock reconvergence pessimism                                            -0.017      0.483
+  library hold time                                                         0.050      0.533
+  data required time                                                                   0.533
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.533
+  data arrival time                                                                   -0.598
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.065
+
+Report timing status: Processing group core_clk (total endpoints 17736)...10% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...20% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...30% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...40% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...50% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...60% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...70% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...80% done.
+Report timing status: Processing group core_clk (total endpoints 17736)...90% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 17706 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1
